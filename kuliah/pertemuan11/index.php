@@ -30,10 +30,6 @@ if (isset($_POST['cari'])) {
     h2 {
       font-weight: 600;
     }
-
-    hr {
-      max-width: 400px;
-    }
   </style>
 </head>
 
@@ -74,7 +70,7 @@ if (isset($_POST['cari'])) {
           <tr class="text-center">
             <td colspan="4">
               <h1>404 Not Found!</h1>
-              <hr>
+              <hr style="max-width: 400px;">
               <p>Data mahasiswa tidak ditemukan!</p>
             </td>
           </tr>
