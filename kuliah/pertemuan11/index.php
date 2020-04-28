@@ -27,13 +27,25 @@ if (isset($_POST['cari'])) {
       font-weight: 400;
     }
 
-    h2 {
+    .container h2 {
       font-weight: 600;
+      margin-top: 75px;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Nabvar -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-unpas.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <strong>Universitas Pasundan</strong>
+      </a>
+    </div>
+  </nav>
+
   <div class="container">
     <h2 class="py-3 text-uppercase text-center">Daftar Mahasiswa</h2>
     <hr>

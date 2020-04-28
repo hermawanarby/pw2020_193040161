@@ -44,6 +44,10 @@ if (isset($_POST['ubah'])) {
       font-weight: 400;
     }
 
+    .container h3 {
+      margin-top: 75px;
+    }
+
     h3,
     h5 {
       font-weight: 600;
@@ -57,9 +61,20 @@ if (isset($_POST['ubah'])) {
 </head>
 
 <body>
+
+  <!-- Nabvar -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-unpas.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <strong>Universitas Pasundan</strong>
+      </a>
+    </div>
+  </nav>
+
   <div class="container mt-2">
     <div class="col-lg-6">
-      <h3>Tambah Data Mahasiswa</h3>
+      <h3>Ubah Data Mahasiswa</h3>
       <hr style="max-width: 540px;">
       <form action="" method="POST">
         <input type="hidden" name="id" value="<?= $m['id']; ?>">

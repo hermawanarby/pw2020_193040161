@@ -26,6 +26,10 @@ $m = query("SELECT * FROM mahasiswa WHERE id = $id");
       font-weight: 400;
     }
 
+    .container h3 {
+      margin-top: 75px;
+    }
+
     h3,
     h5 {
       font-weight: 600;
@@ -43,7 +47,18 @@ $m = query("SELECT * FROM mahasiswa WHERE id = $id");
 </head>
 
 <body>
-  <div class="container m-2">
+
+  <!-- Nabvar -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-unpas.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <strong>Universitas Pasundan</strong>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container ">
     <h3>Detail Mahasiswa</h3>
     <hr style="max-width: 540px;">
     <div class="card mb-3" style="max-width: 540px;">
