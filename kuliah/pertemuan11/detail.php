@@ -34,6 +34,10 @@ $m = query("SELECT * FROM mahasiswa WHERE id = $id");
     hr {
       margin-left: -1px;
     }
+
+    .card-link.card-link {
+      margin-left: 1px;
+    }
   </style>
   <title>Detail Mahasiswa</title>
 </head>
