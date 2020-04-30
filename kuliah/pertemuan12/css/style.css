@@ -1,0 +1,99 @@
+/*Gaya Untuk Tampilan Login*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  background: url(../images/code.jpg);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+/*Mengatur pada kotak login*/
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 420px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #c13c1b;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Mengatur pada inputan login*/
+.form-inputan input[type="text"],
+input[type="password"] {
+  border: 2px solid;
+  outline: none;
+  border-bottom: 2px solid #FFF;
+  margin-bottom: 15px;
+  background: transparent;
+  border-radius: 15px;
+  height: 40px;
+  width: 100%;
+  color: #FFF;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*Mengatur efek inputan login*/
+.form-inputan input:focus {
+  background-color: #ad2403;
+}
+
+/*Mengatur pada button login*/
+.btn-login button {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  color: #c13c1b;
+  background: white;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 55px;
+}
+
+/*Mengatur efek button login*/
+.btn-login button:hover {
+  opacity: 0.8;
+  transition: .3s ease-in;
+}
+
+.signup label {
+  font-size: 13px;
+  color: white;
+  margin-left: 50px;
+}
+
+.signup label a {
+  font-size: 13px;
+  color: #2d92ff;
+  text-decoration: none;
+}
+
+.signup label a:hover {
+  text-decoration: underline;
+}
+
+.btn-login label a {
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  margin-left: 110px;
+}
+
+.btn-login label a:hover {
+  text-decoration: underline;
+}
