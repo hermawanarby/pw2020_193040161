@@ -76,6 +76,7 @@ if (isset($_POST['ubah'])) {
         <img src="images/logo-unpas.png" width="30" height="30" class="d-inline-block align-top" alt="">
         <strong>Universitas Pasundan</strong>
       </a>
+      <a class="nav text-white" href="logout.php">Logout</a>
     </div>
   </nav>
 
