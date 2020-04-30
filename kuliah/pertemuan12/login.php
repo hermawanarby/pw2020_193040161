@@ -26,9 +26,9 @@ if (isset($_POST['login'])) {
 
 <body>
   <div class="container">
-    <h1>Login</h1><br>
+    <h1>Login</h1>
     <?php if (isset($login['error'])) : ?>
-      <?= $login['pesan']; ?>
+      <p style="color: red; font-style: italic; background-color: seashell; text-align: center;"><?= $login['pesan']; ?></p>
     <?php endif; ?>
     <div class="form-inputan">
       <form action="" method="POST">
@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
           <label><a href="#">Forgot password?</a></label>
         </div>
         <div class="signup">
-          <label>Already have an account? | <a href="#"><b>Register</b></a></label>
+          <label>Don't have an account? <a href="registrasi.php"><b>Register Now!</b></a></label>
         </div>
       </form>
     </div>

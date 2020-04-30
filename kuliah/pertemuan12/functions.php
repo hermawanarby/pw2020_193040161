@@ -106,10 +106,7 @@ function login($data)
   } else {
     return [
       'error' => true,
-      'pesan' => '<script>
-                    alert("Username / Password Salah!");
-                    document.location.href = "login.php";
-                  </script>'
+      'pesan' => 'Username / Password Salah!'
     ];
   }
 }
