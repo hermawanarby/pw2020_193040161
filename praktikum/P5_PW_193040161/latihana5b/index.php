@@ -49,7 +49,7 @@ $elektronik = query("SELECT * FROM elektronik");
         <tbody>
           <tr>
             <td><?= $i; ?></td>
-            <td><img src="assets/img/<?= $row["gambar"]; ?>" width="90"></td>
+            <td><img src="assets/images/<?= $row["gambar"]; ?>" width="90"></td>
             <td width="350"><?= $row["nama_produk"]; ?></td>
             <td><?= $row["kategori"]; ?></td>
             <td><?= $row["berat"]; ?></td>
