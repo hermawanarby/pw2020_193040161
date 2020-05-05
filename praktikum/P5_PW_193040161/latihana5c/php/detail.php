@@ -13,6 +13,9 @@ $id = $_GET['id'];
 
 // melakukan query dengan parameter id yang diambil dari url
 $elektronik = query("SELECT * FROM elektronik WHERE id = $id")[0];
+
+// untuk menampung harga yg akan dirubah ke format number rupiah
+$angka = $elektronik['harga'];
 ?>
 
 <!doctype html>
@@ -72,7 +75,7 @@ $elektronik = query("SELECT * FROM elektronik WHERE id = $id")[0];
         <div class="col-lg-6">
           <div class="container">
             <h2><?= $elektronik["nama_produk"]; ?></h2>
-            <h4>IDR <?= $elektronik["harga"]; ?></h4>
+            <h4><?= 'Rp ' . number_format($angka, 0, ".", "."); ?></h4>
             <table class="table table-responsive pt-4">
               <tr>
                 <td>Kategori</td>
