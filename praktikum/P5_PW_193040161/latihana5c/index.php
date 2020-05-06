@@ -65,8 +65,10 @@ $elektronik = query("SELECT * FROM elektronik");
                 </a>
               </div>
               <figcaption class="figure-caption">
-                <h5><?= substr($nama, 0, 30) . '...'; ?></h5>
-                <p><?= 'Rp ' . number_format($angka, 0, ".", "."); ?></p>
+                <a href="php/detail.php?id=<?= $row['id']; ?>" style="text-decoration: none;">
+                  <h5><?= substr($nama, 0, 30) . '...'; ?></h5>
+                  <p><?= 'Rp ' . number_format($angka, 0, ".", "."); ?></p>
+                </a>
               </figcaption>
             </figure>
           </div>
