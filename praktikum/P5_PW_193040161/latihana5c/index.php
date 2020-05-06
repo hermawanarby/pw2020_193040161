@@ -61,7 +61,7 @@ $elektronik = query("SELECT * FROM elektronik");
               <div class="product-img">
                 <img src="assets/images/<?= $row["gambar"]; ?>" class="figure-img img-fluid rounded">
                 <a href="php/detail.php?id=<?= $row['id']; ?>" class="d-flex justify-content-center">
-                  <img src="assets/img/icon-plus.png" class="align-self-center" width="20">
+                  <img src="assets/images/icon-plus.png" class="align-self-center" width="20">
                 </a>
               </div>
               <figcaption class="figure-caption">
