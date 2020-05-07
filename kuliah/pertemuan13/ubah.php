@@ -116,7 +116,9 @@ if (isset($_POST['ubah'])) {
           <img src="images/<?= $m['gambar']; ?>" class="img-thumbnail img-preview" width="120">
         </div>
         <div class="form-group">
+          <hr>
           <button type="submit" class="btn btn-primary" name="ubah">Ubah Data!</button>
+          <a href="detail.php?id=<?= $m['id']; ?>" class="card-link btn btn-secondary ml-2">Kembali</a>
         </div>
       </form>
     </div>

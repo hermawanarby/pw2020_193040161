@@ -104,7 +104,9 @@ if (isset($_POST['tambah'])) {
           <img src="images/nophoto.png" class="img-thumbnail img-preview" width="120">
         </div>
         <div class="form-group">
+          <hr>
           <button type="submit" class="btn btn-primary" name="tambah">Tambah Data!</button>
+          <a href="index.php" class="card-link btn btn-secondary ml-2">Kembali</a>
         </div>
       </form>
     </div>
