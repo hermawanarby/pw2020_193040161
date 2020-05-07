@@ -16,7 +16,9 @@ if (isset($_POST['tambah'])) {
             document.location.href = 'index.php';
         </script>";
   } else {
-    echo "data gagal ditambahkan!";
+    echo "<script>
+            alert('data gagal ditambahkan!');
+          </script>";
   }
 }
 
@@ -72,7 +74,7 @@ if (isset($_POST['tambah'])) {
     <div class="col-lg-6">
       <h3>Tambah Data Mahasiswa</h3>
       <hr style="max-width: 540px;">
-      <form action="" method="POST">
+      <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="nama">Nama:</label>
           <input type="text" class="form-control" id="nama" name="nama" autofocus required>
@@ -90,8 +92,14 @@ if (isset($_POST['tambah'])) {
           <input type="text" class="form-control" id="jurusan" name="jurusan" required>
         </div>
         <div class="form-group">
-          <label for="gambar">Gambar:</label>
-          <input type="text" class="form-control" id="gambar" name="gambar" required>
+          <label>Gambar:</label>
+          <!-- <input type="text" class="form-control" id="gambar" name="gambar" required> -->
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="gambar" name="gambar">
+              <label class="custom-file-label" for="gambar">Choose file</label>
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary" name="tambah">Tambah Data!</button>
@@ -105,6 +113,13 @@ if (isset($_POST['tambah'])) {
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script>
+    $('#gambar').on('change', function(e) {
+      var fileName = e.target.files[0].name;
+      $(this).next('.custom-file-label').html(fileName);
+    })
+  </script>
 </body>
 
 </html>
