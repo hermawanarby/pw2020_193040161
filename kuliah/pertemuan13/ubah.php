@@ -64,7 +64,7 @@ if (isset($_POST['ubah'])) {
       margin-left: -1px;
     }
   </style>
-  <title>Detail Mahasiswa</title>
+  <title>Ubah Mahasiswa</title>
 </head>
 
 <body>
