@@ -84,7 +84,7 @@ if (isset($_POST['ubah'])) {
     <div class="col-lg-6">
       <h3>Ubah Data Mahasiswa</h3>
       <hr style="max-width: 540px;">
-      <form action="" method="POST">
+      <form action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $m['id']; ?>">
         <div class="form-group">
           <label for="nama">Nama:</label>
@@ -103,8 +103,17 @@ if (isset($_POST['ubah'])) {
           <input type="text" class="form-control" id="jurusan" name="jurusan" required value="<?= $m['jurusan']; ?>">
         </div>
         <div class="form-group">
-          <label for="gambar">Gambar:</label>
-          <input type="text" class="form-control" id="gambar" name="gambar" required value="<?= $m['gambar']; ?>">
+          <input type="hidden" class="form-control" name="gambar_lama" value="<?= $m['gambar']; ?>">
+          <label>Gambar:</label>
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input gambar" id="gambar" name="gambar" onchange="previewImage()">
+              <label class="custom-file-label" for="gambar">Choose file</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <img src="images/<?= $m['gambar']; ?>" class="img-thumbnail img-preview" width="120">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary" name="ubah">Ubah Data!</button>
@@ -118,6 +127,13 @@ if (isset($_POST['ubah'])) {
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <script>
+    $('#gambar').on('change', function(e) {
+      var fileName = e.target.files[0].name;
+      $(this).next('.custom-file-label').html(fileName);
+    })
+  </script>
 </body>
 
 </html>
