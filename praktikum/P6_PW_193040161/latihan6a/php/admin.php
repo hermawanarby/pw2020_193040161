@@ -84,8 +84,8 @@ $elektronik = query("SELECT * FROM elektronik");
               <td><?= $e['berat']; ?></td>
               <td><?= 'Rp ' . number_format($angka, 0, ".", "."); ?></td>
               <td>
-                <a href="#" class="btn btn-success btn-sm text-white"><i class="fa fa-edit"></i> Edit</a>
-                <a href="#" class="btn btn-danger btn-sm text-white"><i class="fa fa-trash"></i> Delete</a>
+                <a href="#" class="btn btn-success btn-sm text-white" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i> Edit</a>
+                <a href="#" class="btn btn-danger btn-sm text-white" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i> Delete</a>
               </td>
             </tr>
           </tbody>
