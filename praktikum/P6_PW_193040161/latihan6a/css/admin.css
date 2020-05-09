@@ -1,0 +1,16 @@
+.sidenav {
+  height: 507px;
+}
+
+.nav-link:hover {
+  background-color: gray;
+}
+
+#sidebar {
+  position: fixed;
+  z-index: 1;
+}
+
+#main {
+  margin-left: 220px;
+}
