@@ -41,47 +41,34 @@ $elektronik = query("SELECT * FROM elektronik");
   <!-- Akhir Nabvar -->
 
   <!-- Product -->
-  <section class="product p-5" id="product">
+  <section class="product">
     <div class="container">
       <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center">
           <h3>Arrival Product</h3>
           <p>Barang elektronik terlengkap</p>
           <hr>
         </div>
       </div>
-      <div class="row justify-content-center">
+
+      <div class="row">
         <?php foreach ($elektronik as $row) : ?>
-          <?php
-          $nama = $row['nama_produk'];
-          $angka = $row['harga'];
-          ?>
-          <div class="col">
-            <figure class="figure">
-              <div class="product-img">
-                <img src="assets/images/<?= $row["gambar"]; ?>" class="figure-img img-fluid rounded">
-                <a href="php/detail.php?id=<?= $row['id']; ?>" class="d-flex justify-content-center">
-                  <img src="assets/images/icon-plus.png" class="align-self-center" width="20">
-                </a>
+          <?php $angka = $row['harga']; ?>
+          <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <div class="card">
+              <img src="assets/images/<?= $row['gambar']; ?>" class="card-img-top">
+              <div class="card-body">
+                <h6 class="card-title"><?= $row['nama_produk']; ?></h6>
+                <p class="card-text"><?= 'Rp ' . number_format($angka, 0, ".", "."); ?></p>
               </div>
-              <figcaption class="figure-caption">
-                <a href="php/detail.php?id=<?= $row['id']; ?>" style="text-decoration: none;">
-                  <h5><?= substr($nama, 0, 30) . '...'; ?></h5>
-                  <p><?= 'Rp ' . number_format($angka, 0, ".", "."); ?></p>
-                </a>
-              </figcaption>
-            </figure>
+              <a href="php/detail.php?id=<?= $row['id']; ?>" class="btn btn-info btn-block text-white">Lihat Detail</a>
+            </div>
           </div>
         <?php endforeach; ?>
       </div>
     </div>
   </section>
   <!-- Akhir Product -->
-
-
-
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

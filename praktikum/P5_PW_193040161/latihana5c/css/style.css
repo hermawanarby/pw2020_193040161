@@ -1,54 +1,45 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  /* background-color: #f0f0f0; */
 }
 
-h3 {
+h3,
+h6 {
   font-weight: 600;
+}
+
+h6 {
+  color: rgba(0, 0, 0, .7);
 }
 
 /* ========== PRODUCT  ===========*/
-.product h3 {
-  color: #1f1f1f;
-  font-weight: bold;
+.product {
+  margin-top: 100px;
 }
 
-.product p {
-  font-weight: 200;
-  color: #858383;
+.card img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.figure {
-  width: 198px;
+.card {
+  width: 220px;
+  height: 340px;
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, .09);
 }
 
-.figure .figure-caption p {
-  font-weight: 600;
+.card a {
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, .09);
+}
+
+.card p {
   color: rgb(250, 89, 29);
 }
 
-.figure h5 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #5a5a5a;
-}
-
-.product-img {
-  position: relative;
-}
-
-.product-img a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 8px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 3px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.product-img:hover a {
-  opacity: 1;
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
