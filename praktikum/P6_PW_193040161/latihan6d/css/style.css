@@ -1,3 +1,44 @@
-th {
-  background-color: #c9c9c9;
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+h3,
+h6 {
+  font-weight: 600;
+}
+
+h6 {
+  color: rgba(0, 0, 0, .7);
+}
+
+/* ========== PRODUCT  ===========*/
+.product {
+  margin-top: 100px;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  width: 220px;
+  height: 340px;
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, .09);
+}
+
+.card a {
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, .09);
+}
+
+.card p {
+  color: rgb(250, 89, 29);
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
