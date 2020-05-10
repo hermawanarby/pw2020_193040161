@@ -42,9 +42,10 @@ if (isset($_POST['ubah'])) {
   <!-- Navbar -->
   <nav class="navbar navbar-dark fixed-top" style="background-color: #6c42f5">
     <a class="navbar-brand" href="#">
-      <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      <strong class="text-uppercase"><i class="fa fa-home"></i> Halaman Admin</strong>
+      <i class="fa fa-home"></i>
+      <strong class="text-uppercase"> Halaman Admin</strong>
     </a>
+    <a href="logout.php" class="navbar-brand"><i class="fa fa-user-circle mr-2"></i>Logout</a>
   </nav>
   <!-- Akhir Navbar -->
 
