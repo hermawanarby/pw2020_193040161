@@ -19,7 +19,7 @@ if (isset($_GET['cari'])) {
 } else {
   $elektronik = query("SELECT * FROM elektronik");
 }
-$user = query("SELECT * FROM user");
+
 ?>
 
 
@@ -49,14 +49,7 @@ $user = query("SELECT * FROM user");
       <i class="fa fa-home"></i>
       <strong class="text-uppercase"> Halaman Admin</strong>
     </a>
-    <?php foreach ($user as $u) : ?>
-      <div class="dropdown">
-        <a href="logout.php" class="navbar-brand dropdown-toggle text-capitalize" data-toggle="dropdown"><i class="fa fa-user-circle mr-2"></i>Halo, <?= $u['username']; ?></a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
-        </div>
-      </div>
-    <?php endforeach; ?>
+    <a href="logout.php" class="navbar-brand  text-capitalize"><i class="fa fa-sign-out mr-1"></i>Logout</a>
   </nav>
   <!-- Akhir Navbar -->
 
