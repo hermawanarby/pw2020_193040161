@@ -1,4 +1,5 @@
 <?php
+session_start();
 // menghubungkan dengan file php lainnya
 require 'php/functions.php';
 
@@ -67,7 +68,11 @@ if (isset($_GET['cari'])) {
             </div>
           </form>
         </ul>
-        <a href="php/login.php" class="nav-link text-uppercase btn btn-outline-light">Login</a>
+        <?php if (isset($_SESSION['username']) && !empty($_SESSION['username'])) : ?>
+          <a href="php/admin.php" class="nav-link text-uppercase btn btn-outline-light">Admin</a>
+        <?php else : ?>
+          <a href="php/login.php" class="nav-link text-uppercase btn btn-outline-light">Login</a>
+        <?php endif; ?>
       </div>
     </div>
   </nav>
