@@ -199,7 +199,7 @@ $newProduct = query("SELECT * FROM elektronik ORDER by id DESC LIMIT 5");
     </div>
   </section>
   <footer class="text-muted text-center">
-    <p>&copy; Copyright 2020. Design by <a href="#" class="text-muted">Hermawan Arby</a></p>
+    <p style="font-size: 12px;">&copy; Copyright 2020. Design by <a href="#" class="text-muted">Hermawan Arby</a></p>
   </footer>
   <!-- Akhir Footer -->
 
