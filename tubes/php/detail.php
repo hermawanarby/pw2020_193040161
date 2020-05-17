@@ -109,13 +109,14 @@ $rekomendasi = query("SELECT * FROM elektronik ORDER BY RAND() LIMIT 3");
       <h5 class="mb-3">Rekomendasi Produk</h5>
       <div class="row">
         <?php foreach ($rekomendasi as $rek) : ?>
+          <?php $format = $rek['harga'] ?>
           <div class="col mb-4">
             <a href="detail.php?id=<?= $rek['id']; ?>" class="text-decoration-none">
               <div class="card">
                 <img src="../assets/images/produk/<?= $rek["gambar"]; ?>" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title"><?= $rek["nama_produk"]; ?></h5>
-                  <p class="card-text"><?= 'Rp ' . number_format($angka, 0, ".", "."); ?></p>
+                  <p class="card-text"><?= 'Rp ' . number_format($format, 0, ".", "."); ?></p>
                 </div>
               </div>
             </a>
