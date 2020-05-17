@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Navbar ============== */
+nav {
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.nav-link {
+  font-weight: 400;
+}
+
+.input-group input[type=text]:focus {
+  border: 0;
+  box-shadow: 0 0 2pt 1pt #ff9900;
+}
+
+.btn-primary {
+  background: #ff9900;
+  border: 0;
+  padding: 8px 25px 8px 25px;
+}
+
+.btn-primary:hover {
+  background: rgb(219, 133, 4);
+  border: 0;
+}
+
+#banner-area {
+  margin-top: 98px;
+}
+
+/* ======= Tombol prev & next carousel product ========*/
+.owl-carousel .owl-nav button {
+  position: absolute;
+  top: 30%;
+  outline: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  font-size: 50px;
+  color: #818181;
+  padding: 0 1rem;
+}
+
+.owl-carousel .owl-nav button.owl-prev span {
+  margin-left: -3rem;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-carousel .owl-nav button.owl-next span {
+  margin-right: -3rem;
+}
+
+/* ========== Product  ===========*/
+.card img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  width: 220px;
+  height: 340px;
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, .09);
+}
+
+.card a {
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, .09);
+}
+
+.card p {
+  color: rgb(250, 89, 29);
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============= Footer =================*/
+footer {
+  background-color: #2b3036;
+  height: 8vh;
+}
+
+footer p {
+  padding-top: 11px;
+}
+
+section.footer {
+  box-shadow: 0px 1px 10px 3px #333941;
+}
+
+/* ============= Responsive =================*/
+@media only screen and (max-width: 425px) {
+  .btn-primary {
+    margin-left: 0 !important;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev span {
+    margin-left: -1rem;
+  }
+
+  .owl-carousel .owl-nav button.owl-next span {
+    margin-right: -1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-primary {
+    margin-left: 0 !important;
+  }
+}
